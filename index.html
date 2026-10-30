@@ -3,40 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light only">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <title>Vodo doktor — predlozi za znak</title>
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Dvanaest predloga za znak firme Vodo doktor. Svaki se može preuzeti kao SVG.">
+<meta name="description" content="Predlozi za znak firme Vodo doktor. Svaki se može preuzeti kao SVG.">
 <style>
+  /* Strana je uvek svetla. Znaci su crtani tamnoplavo i na tamnoj podlozi
+     nestaju, pa se tamna tema ne koristi. Pored toga, svaki znak je slika
+     sa sopstvenom belom podlogom: pregledači koji sami zatamnjuju strane
+     (Chrome na Androidu) ne diraju sadržaj slika, pa znak ostaje čitljiv
+     i kada korisnik uključi tamni režim u telefonu. */
   :root{
+    color-scheme: only light;
     --ink:#0F2436; --brand:#C8401A; --muted:#5B7286; --line:#DDE4EA;
     --bg:#F2F5F7; --card:#ffffff; --line-2:#EDF1F4;
     --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
-  /* Strana je uvek svetla. Znaci su crtani u tamnoj boji, pa na tamnoj
-     podlozi nestaju — zato se i tamna tema i automatsko zatamnjenje
-     pregledača isključuju. */
-  :root{color-scheme:light}
   *{box-sizing:border-box;margin:0}
-  body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.5;
+  html{background:#F2F5F7}
+  body{background:#F2F5F7;color:#0F2436;font-family:var(--font);line-height:1.5;
        padding:40px 16px 56px;-webkit-text-size-adjust:100%}
   .wrap{max-width:1180px;margin:0 auto}
-  .kick{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+  .kick{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#C8401A;margin-bottom:8px}
   h1{font-size:clamp(26px,5.5vw,40px);font-weight:800;letter-spacing:-0.6px;line-height:1.15;margin-bottom:34px}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
-  .c{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  .c{position:relative;background:#ffffff;border:1px solid #DDE4EA;border-radius:14px;
      padding:28px 18px 16px;display:flex;flex-direction:column;align-items:center;gap:14px}
-  .n{position:absolute;top:12px;left:14px;width:26px;height:26px;border-radius:8px;background:var(--ink);
-     color:var(--bg);font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .n{position:absolute;top:12px;left:14px;width:26px;height:26px;border-radius:8px;background:#0F2436;
+     color:#F2F5F7;font-size:13.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
   .mark{width:100px;height:100px;display:block}
   .t{font-size:15px;font-weight:700;text-align:center;line-height:1.3;min-height:40px;
-     display:flex;align-items:center;justify-content:center}
-  .bot{border-top:1px solid var(--line-2);padding-top:12px;width:100%;
+     display:flex;align-items:center;justify-content:center;color:#0F2436}
+  .bot{border-top:1px solid #EDF1F4;padding-top:12px;width:100%;
        display:flex;align-items:center;justify-content:space-between;gap:10px}
-  .mini{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
-  .dl{appearance:none;background:none;border:1px solid var(--line);border-radius:7px;color:var(--muted);
+  .mini{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#5B7286}
+  .dl{appearance:none;background:#ffffff;border:1px solid #DDE4EA;border-radius:7px;color:#5B7286;
       font:inherit;font-size:13px;font-weight:600;padding:0 14px;min-height:44px;cursor:pointer}
-  .dl:hover{border-color:var(--brand);color:var(--brand)}
+  .dl:hover{border-color:#C8401A;color:#C8401A}
   @media (max-width:430px){
     body{padding:28px 16px 44px}
     .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -59,198 +63,148 @@
 
     <figure class="c">
       <span class="n">1</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap sa manometrom" data-ime="kap-sa-manometrom">
-        <path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path>
-        <circle cx="24" cy="29" r="8.2" fill="#ffffff"></circle>
-        <path d="M18.6 24.4l1.3 1.3M29.4 24.4l-1.3 1.3" stroke="#0F2436" stroke-width="1.5" stroke-linecap="round"></path>
-        <path d="M24 29l4.6-4.6" stroke="#C8401A" stroke-width="2.3" stroke-linecap="round"></path>
-        <circle cx="24" cy="29" r="1.7" fill="#0F2436"></circle>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%228.2%22%20fill%3D%22%23ffffff%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M18.6%2024.4l1.3%201.3M29.4%2024.4l-1.3%201.3%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2029l4.6-4.6%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.3%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%221.7%22%20fill%3D%22%230F2436%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E" alt="Kap sa manometrom" width="100" height="100">
       <figcaption class="t">Kap sa manometrom</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path><circle cx="24" cy="29" r="8.2" fill="#ffffff"></circle><path d="M24 29l4.6-4.6" stroke="#C8401A" stroke-width="2.6" stroke-linecap="round"></path><circle cx="24" cy="29" r="1.9" fill="#0F2436"></circle></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%228.2%22%20fill%3D%22%23ffffff%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M24%2029l4.6-4.6%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%221.9%22%20fill%3D%22%230F2436%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-sa-manometrom"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20sa%20manometrom%22%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%228.2%22%20fill%3D%22%23ffffff%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M18.6%2024.4l1.3%201.3M29.4%2024.4l-1.3%201.3%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2029l4.6-4.6%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.3%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%221.7%22%20fill%3D%22%230F2436%22%3E%3C%2Fcircle%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">2</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap sa osluškivanjem" data-ime="kap-sa-osluskivanjem">
-        <path d="M18 5C18 5 6 19 6 27a12 12 0 0 0 24 0C30 19 18 5 18 5Z" fill="#0F2436"></path>
-        <g fill="none" stroke="#C8401A" stroke-width="2.6" stroke-linecap="round">
-          <path d="M35 21.5a9 9 0 0 1 0 13"></path>
-          <path d="M41 16.5a17 17 0 0 1 0 23"></path>
-        </g>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M18%205C18%205%206%2019%206%2027a12%2012%200%200%200%2024%200C30%2019%2018%205%2018%205Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M35%2021.5a9%209%200%200%201%200%2013%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M41%2016.5a17%2017%200%200%201%200%2023%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E" alt="Kap sa osluškivanjem" width="100" height="100">
       <figcaption class="t">Kap sa osluškivanjem</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M18 5C18 5 6 19 6 27a12 12 0 0 0 24 0C30 19 18 5 18 5Z" fill="#0F2436"></path><g fill="none" stroke="#C8401A" stroke-width="3" stroke-linecap="round"><path d="M35 21.5a9 9 0 0 1 0 13"></path><path d="M41 16.5a17 17 0 0 1 0 23"></path></g></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M18%205C18%205%206%2019%206%2027a12%2012%200%200%200%2024%200C30%2019%2018%205%2018%205Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M35%2021.5a9%209%200%200%201%200%2013%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M41%2016.5a17%2017%200%200%201%200%2023%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-sa-osluskivanjem"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20sa%20oslu%C5%A1kivanjem%22%3E%3Cpath%20d%3D%22M18%205C18%205%206%2019%206%2027a12%2012%200%200%200%2024%200C30%2019%2018%205%2018%205Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M35%2021.5a9%209%200%200%201%200%2013%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M41%2016.5a17%2017%200%200%201%200%2023%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">3</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Doktorska torba" data-ime="doktorska-torba">
-        <path d="M18 17.5v-3.2a3.2 3.2 0 0 1 3.2-3.2h5.6a3.2 3.2 0 0 1 3.2 3.2v3.2" fill="none" stroke="#0F2436" stroke-width="3" stroke-linecap="round"></path>
-        <rect x="5" y="17.5" width="38" height="22.5" rx="4.5" fill="#0F2436"></rect>
-        <path d="M24 22.8C24 22.8 19.2 28.6 19.2 31.2a4.8 4.8 0 0 0 9.6 0C28.8 28.6 24 22.8 24 22.8Z" fill="#ffffff"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M18%2017.5v-3.2a3.2%203.2%200%200%201%203.2-3.2h5.6a3.2%203.2%200%200%201%203.2%203.2v3.2%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%225%22%20y%3D%2217.5%22%20width%3D%2238%22%20height%3D%2222.5%22%20rx%3D%224.5%22%20fill%3D%22%230F2436%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2022.8C24%2022.8%2019.2%2028.6%2019.2%2031.2a4.8%204.8%200%200%200%209.6%200C28.8%2028.6%2024%2022.8%2024%2022.8Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Doktorska torba" width="100" height="100">
       <figcaption class="t">Doktorska torba</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M18 17.5v-3.2a3.2 3.2 0 0 1 3.2-3.2h5.6a3.2 3.2 0 0 1 3.2 3.2v3.2" fill="none" stroke="#0F2436" stroke-width="3.4" stroke-linecap="round"></path><rect x="5" y="17.5" width="38" height="22.5" rx="4.5" fill="#0F2436"></rect><path d="M24 22.8C24 22.8 19.2 28.6 19.2 31.2a4.8 4.8 0 0 0 9.6 0C28.8 28.6 24 22.8 24 22.8Z" fill="#ffffff"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M18%2017.5v-3.2a3.2%203.2%200%200%201%203.2-3.2h5.6a3.2%203.2%200%200%201%203.2%203.2v3.2%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%223.4%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%3Crect%20x%3D%225%22%20y%3D%2217.5%22%20width%3D%2238%22%20height%3D%2222.5%22%20rx%3D%224.5%22%20fill%3D%22%230F2436%22%3E%3C%2Frect%3E%3Cpath%20d%3D%22M24%2022.8C24%2022.8%2019.2%2028.6%2019.2%2031.2a4.8%204.8%200%200%200%209.6%200C28.8%2028.6%2024%2022.8%2024%2022.8Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="doktorska-torba"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Doktorska%20torba%22%3E%3Cpath%20d%3D%22M18%2017.5v-3.2a3.2%203.2%200%200%201%203.2-3.2h5.6a3.2%203.2%200%200%201%203.2%203.2v3.2%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Crect%20x%3D%225%22%20y%3D%2217.5%22%20width%3D%2238%22%20height%3D%2222.5%22%20rx%3D%224.5%22%20fill%3D%22%230F2436%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2022.8C24%2022.8%2019.2%2028.6%2019.2%2031.2a4.8%204.8%200%200%200%209.6%200C28.8%2028.6%2024%2022.8%2024%2022.8Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">4</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap u navrtki" data-ime="kap-u-navrtki">
-        <path d="M24 3L42 13.5v21L24 45 6 34.5v-21Z" fill="#0F2436"></path>
-        <path d="M24 13.5C24 13.5 15.5 23 15.5 28.3a8.5 8.5 0 0 0 17 0C32.5 23 24 13.5 24 13.5Z" fill="#ffffff"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%203L42%2013.5v21L24%2045%206%2034.5v-21Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2013.5C24%2013.5%2015.5%2023%2015.5%2028.3a8.5%208.5%200%200%200%2017%200C32.5%2023%2024%2013.5%2024%2013.5Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Kap u navrtki" width="100" height="100">
       <figcaption class="t">Kap u navrtki</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 3L42 13.5v21L24 45 6 34.5v-21Z" fill="#0F2436"></path><path d="M24 13.5C24 13.5 15.5 23 15.5 28.3a8.5 8.5 0 0 0 17 0C32.5 23 24 13.5 24 13.5Z" fill="#ffffff"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%203L42%2013.5v21L24%2045%206%2034.5v-21Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M24%2013.5C24%2013.5%2015.5%2023%2015.5%2028.3a8.5%208.5%200%200%200%2017%200C32.5%2023%2024%2013.5%2024%2013.5Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-u-navrtki"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20u%20navrtki%22%3E%3Cpath%20d%3D%22M24%203L42%2013.5v21L24%2045%206%2034.5v-21Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2013.5C24%2013.5%2015.5%2023%2015.5%2028.3a8.5%208.5%200%200%200%2017%200C32.5%2023%2024%2013.5%2024%2013.5Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">5</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap sa termometrom" data-ime="kap-sa-termometrom">
-        <path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="none" stroke="#0F2436" stroke-width="3"></path>
-        <path d="M21.4 31.2V20.5a2.6 2.6 0 0 1 5.2 0v10.7" fill="none" stroke="#C8401A" stroke-width="2.3"></path>
-        <circle cx="24" cy="34.6" r="4.4" fill="#C8401A"></circle>
-        <path d="M24 25.5v7" stroke="#C8401A" stroke-width="2.3" stroke-linecap="round"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%223%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M21.4%2031.2V20.5a2.6%202.6%200%200%201%205.2%200v10.7%22%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.3%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2234.6%22%20r%3D%224.4%22%20fill%3D%22%23C8401A%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2025.5v7%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.3%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Kap sa termometrom" width="100" height="100">
       <figcaption class="t">Kap sa termometrom</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="none" stroke="#0F2436" stroke-width="3.4"></path><circle cx="24" cy="34.6" r="4.4" fill="#C8401A"></circle><path d="M24 23v8.5" stroke="#C8401A" stroke-width="2.8" stroke-linecap="round"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%223.4%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2234.6%22%20r%3D%224.4%22%20fill%3D%22%23C8401A%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M24%2023v8.5%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.8%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-sa-termometrom"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20sa%20termometrom%22%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%223%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M21.4%2031.2V20.5a2.6%202.6%200%200%201%205.2%200v10.7%22%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.3%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2234.6%22%20r%3D%224.4%22%20fill%3D%22%23C8401A%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2025.5v7%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%222.3%22%20stroke-linecap%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">6</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap sa srcem" data-ime="kap-sa-srcem">
-        <path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path>
-        <path d="M24 37.5c-4.6-3.4-8-6.2-8-9.7a4 4 0 0 1 8-1.5 4 4 0 0 1 8 1.5c0 3.5-3.4 6.3-8 9.7Z" fill="#ffffff"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2037.5c-4.6-3.4-8-6.2-8-9.7a4%204%200%200%201%208-1.5%204%204%200%200%201%208%201.5c0%203.5-3.4%206.3-8%209.7Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Kap sa srcem" width="100" height="100">
       <figcaption class="t">Kap sa srcem</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path><path d="M24 37.5c-4.6-3.4-8-6.2-8-9.7a4 4 0 0 1 8-1.5 4 4 0 0 1 8 1.5c0 3.5-3.4 6.3-8 9.7Z" fill="#ffffff"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M24%2037.5c-4.6-3.4-8-6.2-8-9.7a4%204%200%200%201%208-1.5%204%204%200%200%201%208%201.5c0%203.5-3.4%206.3-8%209.7Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-sa-srcem"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20sa%20srcem%22%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2037.5c-4.6-3.4-8-6.2-8-9.7a4%204%200%200%201%208-1.5%204%204%200%200%201%208%201.5c0%203.5-3.4%206.3-8%209.7Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">7</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap sa ključem" data-ime="kap-sa-kljucem">
-        <path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path>
-        <path d="M30.6 21.1a5.6 5.6 0 0 0-7.6 6.7l-6.1 6.1a2.4 2.4 0 0 0 3.4 3.4l6.1-6.1a5.6 5.6 0 0 0 6.7-7.6l-3.3 3.3-3.1-.7-.7-3.1 4.6-2Z" fill="#ffffff"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M30.6%2021.1a5.6%205.6%200%200%200-7.6%206.7l-6.1%206.1a2.4%202.4%200%200%200%203.4%203.4l6.1-6.1a5.6%205.6%200%200%200%206.7-7.6l-3.3%203.3-3.1-.7-.7-3.1%204.6-2Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Kap sa ključem" width="100" height="100">
       <figcaption class="t">Kap sa ključem</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path><path d="M30.6 21.1a5.6 5.6 0 0 0-7.6 6.7l-6.1 6.1a2.4 2.4 0 0 0 3.4 3.4l6.1-6.1a5.6 5.6 0 0 0 6.7-7.6l-3.3 3.3-3.1-.7-.7-3.1 4.6-2Z" fill="#ffffff"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M30.6%2021.1a5.6%205.6%200%200%200-7.6%206.7l-6.1%206.1a2.4%202.4%200%200%200%203.4%203.4l6.1-6.1a5.6%205.6%200%200%200%206.7-7.6l-3.3%203.3-3.1-.7-.7-3.1%204.6-2Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-sa-kljucem"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20sa%20klju%C4%8Dem%22%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M30.6%2021.1a5.6%205.6%200%200%200-7.6%206.7l-6.1%206.1a2.4%202.4%200%200%200%203.4%203.4l6.1-6.1a5.6%205.6%200%200%200%206.7-7.6l-3.3%203.3-3.1-.7-.7-3.1%204.6-2Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">8</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Slavina sa kapi" data-ime="slavina-sa-kapi">
-        <g fill="#0F2436">
-          <rect x="6.5" y="8" width="14" height="4.4" rx="2.2"></rect>
-          <rect x="10.5" y="12.4" width="6" height="20" rx="1.6"></rect>
-          <rect x="10.5" y="14" width="21" height="6" rx="2.4"></rect>
-          <rect x="25.5" y="18" width="6" height="8.5" rx="2.2"></rect>
-        </g>
-        <path d="M28.5 31.5c0 0-3.3 4.4-3.3 6.5a3.3 3.3 0 0 0 6.6 0c0-2.1-3.3-6.5-3.3-6.5Z" fill="#C8401A"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cg%20fill%3D%22%230F2436%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%226.5%22%20y%3D%228%22%20width%3D%2214%22%20height%3D%224.4%22%20rx%3D%222.2%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%2210.5%22%20y%3D%2212.4%22%20width%3D%226%22%20height%3D%2220%22%20rx%3D%221.6%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%2210.5%22%20y%3D%2214%22%20width%3D%2221%22%20height%3D%226%22%20rx%3D%222.4%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%2225.5%22%20y%3D%2218%22%20width%3D%226%22%20height%3D%228.5%22%20rx%3D%222.2%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M28.5%2031.5c0%200-3.3%204.4-3.3%206.5a3.3%203.3%200%200%200%206.6%200c0-2.1-3.3-6.5-3.3-6.5Z%22%20fill%3D%22%23C8401A%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Slavina sa kapi" width="100" height="100">
       <figcaption class="t">Slavina sa kapi</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><g fill="#0F2436"><rect x="6.5" y="8" width="14" height="4.4" rx="2.2"></rect><rect x="10.5" y="12.4" width="6" height="20" rx="1.6"></rect><rect x="10.5" y="14" width="21" height="6" rx="2.4"></rect><rect x="25.5" y="18" width="6" height="8.5" rx="2.2"></rect></g><path d="M28.5 31.5c0 0-3.3 4.4-3.3 6.5a3.3 3.3 0 0 0 6.6 0c0-2.1-3.3-6.5-3.3-6.5Z" fill="#C8401A"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cg%20fill%3D%22%230F2436%22%3E%3Crect%20x%3D%226.5%22%20y%3D%228%22%20width%3D%2214%22%20height%3D%224.4%22%20rx%3D%222.2%22%3E%3C%2Frect%3E%3Crect%20x%3D%2210.5%22%20y%3D%2212.4%22%20width%3D%226%22%20height%3D%2220%22%20rx%3D%221.6%22%3E%3C%2Frect%3E%3Crect%20x%3D%2210.5%22%20y%3D%2214%22%20width%3D%2221%22%20height%3D%226%22%20rx%3D%222.4%22%3E%3C%2Frect%3E%3Crect%20x%3D%2225.5%22%20y%3D%2218%22%20width%3D%226%22%20height%3D%228.5%22%20rx%3D%222.2%22%3E%3C%2Frect%3E%3C%2Fg%3E%3Cpath%20d%3D%22M28.5%2031.5c0%200-3.3%204.4-3.3%206.5a3.3%203.3%200%200%200%206.6%200c0-2.1-3.3-6.5-3.3-6.5Z%22%20fill%3D%22%23C8401A%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="slavina-sa-kapi"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Slavina%20sa%20kapi%22%3E%3Cg%20fill%3D%22%230F2436%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%226.5%22%20y%3D%228%22%20width%3D%2214%22%20height%3D%224.4%22%20rx%3D%222.2%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%2210.5%22%20y%3D%2212.4%22%20width%3D%226%22%20height%3D%2220%22%20rx%3D%221.6%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%2210.5%22%20y%3D%2214%22%20width%3D%2221%22%20height%3D%226%22%20rx%3D%222.4%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%20%20%3Crect%20x%3D%2225.5%22%20y%3D%2218%22%20width%3D%226%22%20height%3D%228.5%22%20rx%3D%222.2%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M28.5%2031.5c0%200-3.3%204.4-3.3%206.5a3.3%203.3%200%200%200%206.6%200c0-2.1-3.3-6.5-3.3-6.5Z%22%20fill%3D%22%23C8401A%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">9</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Slovo D u kapi" data-ime="slovo-d-u-kapi">
-        <path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#C8401A"></path>
-        <path d="M18.5 21h5a7.8 7.8 0 0 1 0 15.6h-5V21Z" fill="none" stroke="#ffffff" stroke-width="3.1" stroke-linejoin="round"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%23C8401A%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M18.5%2021h5a7.8%207.8%200%200%201%200%2015.6h-5V21Z%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.1%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Slovo D u kapi" width="100" height="100">
       <figcaption class="t">Slovo D u kapi</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#C8401A"></path><path d="M18.5 21h5a7.8 7.8 0 0 1 0 15.6h-5V21Z" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linejoin="round"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%23C8401A%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M18.5%2021h5a7.8%207.8%200%200%201%200%2015.6h-5V21Z%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.6%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="slovo-d-u-kapi"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Slovo%20D%20u%20kapi%22%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%23C8401A%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M18.5%2021h5a7.8%207.8%200%200%201%200%2015.6h-5V21Z%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.1%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">10</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Pečat VD" data-ime="pecat-vd">
-        <rect x="4" y="4" width="40" height="40" rx="11" fill="#0F2436"></rect>
-        <path d="M12.3 16.5l5 15 5-15" fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M25.3 16.5v15h2.9a7.5 7.5 0 0 0 0-15h-2.9Z" fill="none" stroke="#C8401A" stroke-width="3.2" stroke-linejoin="round"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2211%22%20fill%3D%22%230F2436%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M12.3%2016.5l5%2015%205-15%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M25.3%2016.5v15h2.9a7.5%207.5%200%200%200%200-15h-2.9Z%22%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%223.2%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Pečat VD" width="100" height="100">
       <figcaption class="t">Pečat VD</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><rect x="4" y="4" width="40" height="40" rx="11" fill="#0F2436"></rect><path d="M12.3 16.5l5 15 5-15" fill="none" stroke="#ffffff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M25.3 16.5v15h2.9a7.5 7.5 0 0 0 0-15h-2.9Z" fill="none" stroke="#C8401A" stroke-width="3.6" stroke-linejoin="round"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2211%22%20fill%3D%22%230F2436%22%3E%3C%2Frect%3E%3Cpath%20d%3D%22M12.3%2016.5l5%2015%205-15%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M25.3%2016.5v15h2.9a7.5%207.5%200%200%200%200-15h-2.9Z%22%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%223.6%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="pecat-vd"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Pe%C4%8Dat%20VD%22%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%2211%22%20fill%3D%22%230F2436%22%3E%3C%2Frect%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M12.3%2016.5l5%2015%205-15%22%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M25.3%2016.5v15h2.9a7.5%207.5%200%200%200%200-15h-2.9Z%22%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%223.2%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">11</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap u štitu" data-ime="kap-u-stitu">
-        <path d="M24 4l16 6v12.5C40 32 33 39.5 24 44c-9-4.5-16-12-16-21.5V10l16-6Z" fill="#0F2436"></path>
-        <path d="M24 14C24 14 17 22.2 17 26.7a7 7 0 0 0 14 0C31 22.2 24 14 24 14Z" fill="#ffffff"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204l16%206v12.5C40%2032%2033%2039.5%2024%2044c-9-4.5-16-12-16-21.5V10l16-6Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2014C24%2014%2017%2022.2%2017%2026.7a7%207%200%200%200%2014%200C31%2022.2%2024%2014%2024%2014Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Kap u štitu" width="100" height="100">
       <figcaption class="t">Kap u štitu</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4l16 6v12.5C40 32 33 39.5 24 44c-9-4.5-16-12-16-21.5V10l16-6Z" fill="#0F2436"></path><path d="M24 14C24 14 17 22.2 17 26.7a7 7 0 0 0 14 0C31 22.2 24 14 24 14Z" fill="#ffffff"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204l16%206v12.5C40%2032%2033%2039.5%2024%2044c-9-4.5-16-12-16-21.5V10l16-6Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Cpath%20d%3D%22M24%2014C24%2014%2017%2022.2%2017%2026.7a7%207%200%200%200%2014%200C31%2022.2%2024%2014%2024%2014Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-u-stitu"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20u%20%C5%A1titu%22%3E%3Cpath%20d%3D%22M24%204l16%206v12.5C40%2032%2033%2039.5%2024%2044c-9-4.5-16-12-16-21.5V10l16-6Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2014C24%2014%2017%2022.2%2017%2026.7a7%207%200%200%200%2014%200C31%2022.2%2024%2014%2024%2014Z%22%20fill%3D%22%23ffffff%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
     <figure class="c">
       <span class="n">12</span>
-      <svg class="mark" viewBox="0 0 48 48" role="img" aria-label="Kap sa satom 0–24" data-ime="kap-sa-satom">
-        <path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path>
-        <circle cx="24" cy="29" r="8.2" fill="#ffffff"></circle>
-        <path d="M24 24.2v5.1l3.6 2.1" fill="none" stroke="#0F2436" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
+      <img class="mark" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%228.2%22%20fill%3D%22%23ffffff%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2024.2v5.1l3.6%202.1%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%222.1%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="Kap sa satom 0–24" width="100" height="100">
       <figcaption class="t">Kap sa satom 0–24</figcaption>
       <div class="bot">
-        <span class="mini"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path d="M24 4C24 4 10 20 10 29a14 14 0 0 0 28 0C38 20 24 4 24 4Z" fill="#0F2436"></path><circle cx="24" cy="29" r="8.2" fill="#ffffff"></circle><path d="M24 24.2v5.1l3.6 2.1" fill="none" stroke="#0F2436" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>22 px</span>
-        <button class="dl" type="button">SVG</button>
+        <span class="mini"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%227%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%228.2%22%20fill%3D%22%23ffffff%22%3E%3C%2Fcircle%3E%3Cpath%20d%3D%22M24%2024.2v5.1l3.6%202.1%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E" alt="" width="22" height="22">22 px</span>
+        <button class="dl" type="button" data-ime="kap-sa-satom"
+          data-svg="%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2048%2048%22%20width%3D%22512%22%20height%3D%22512%22%20role%3D%22img%22%20aria-label%3D%22Kap%20sa%20satom%200%E2%80%9324%22%3E%3Cpath%20d%3D%22M24%204C24%204%2010%2020%2010%2029a14%2014%200%200%200%2028%200C38%2020%2024%204%2024%204Z%22%20fill%3D%22%230F2436%22%3E%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2224%22%20cy%3D%2229%22%20r%3D%228.2%22%20fill%3D%22%23ffffff%22%3E%3C%2Fcircle%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M24%2024.2v5.1l3.6%202.1%22%20fill%3D%22none%22%20stroke%3D%22%230F2436%22%20stroke-width%3D%222.1%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E%0A">SVG</button>
       </div>
     </figure>
 
   </div>
 
-
 </div>
 
 <script>
-  // Preuzimanje znaka u vektoru. Sve se pravi iz onoga što je već na strani,
-  // pa fajl radi i bez interneta i bez ijedne spoljne biblioteke.
+  // Preuzimanje znaka u vektoru, iz onoga što je već u strani.
   document.querySelectorAll(".dl").forEach(function (dugme) {
     dugme.addEventListener("click", function () {
-      var kartica = dugme.closest(".c");
-      var znak = kartica.querySelector(".mark");
-      var kopija = znak.cloneNode(true);
-      kopija.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-      kopija.setAttribute("width", "512");
-      kopija.setAttribute("height", "512");
-      kopija.removeAttribute("class");
-      kopija.removeAttribute("data-ime");
-      var tekst = '<?xml version="1.0" encoding="UTF-8"?>\n' + kopija.outerHTML + "\n";
+      var tekst = decodeURIComponent(dugme.getAttribute("data-svg"));
       var veza = document.createElement("a");
       veza.href = URL.createObjectURL(new Blob([tekst], { type: "image/svg+xml" }));
-      veza.download = "vodo-doktor-" + znak.getAttribute("data-ime") + ".svg";
+      veza.download = "vodo-doktor-" + dugme.getAttribute("data-ime") + ".svg";
       document.body.appendChild(veza);
       veza.click();
       document.body.removeChild(veza);
